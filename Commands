@@ -1,0 +1,2 @@
+sudo riak-admin bucket-type create klant-type2 '{"props":{"search_index":"klantIndex"}}'
+sudo riak-admin bucket-type activate klant-type2
