@@ -1,4 +1,4 @@
-package nl.hu.bdsd
+package client
 
 import com.basho.riak.client.api.RiakClient
 import com.opencsv.CSVReader
@@ -16,11 +16,11 @@ class Klant(val klantId: Int)
 class Filiaal(val filiaalId: Int)
 
 internal class CsvImporter(private val client: RiakClient) {
-    private var productCsv = "client/src/main/resources/product.csv"
-    private var aankoopCsv = "client/src/main/resources/aankoop.csv"
-    private var eenheidCsv = "client/src/main/resources/eenheid.csv"
-    private var filiaalCsv = "client/src/main/resources/filiaal.csv"
-    private var klantCsv = "client/src/main/resources/klant.csv"
+    private var productCsv = "resources/product.csv"
+    private var aankoopCsv = "resources/aankoop.csv"
+    private var eenheidCsv = "resources/eenheid.csv"
+    private var filiaalCsv = "resources/filiaal.csv"
+    private var klantCsv = "resources/klant.csv"
 
     private fun storeData(riakObject: Any, key: String, bucket: String) {
         val location = Location(Namespace(bucket), key)

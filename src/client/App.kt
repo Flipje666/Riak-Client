@@ -1,4 +1,4 @@
-package nl.hu.bdsd
+package client
 
 import com.basho.riak.client.api.RiakClient
 import com.basho.riak.client.api.commands.kv.FetchValue
@@ -26,8 +26,8 @@ object App {
     fun main(args: Array<String>) {
         val cluster = setUpCluster()
         val client = RiakClient(cluster)
-//        val importer = CsvImporter(client)
 
+//        val importer = CsvImporter(client)
 //        importer.importProductCsv()
 //        importer.importEenheidCsv()
 //        importer.importAankoopCsv()
