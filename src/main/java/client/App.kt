@@ -11,7 +11,7 @@ import com.basho.riak.client.core.operations.SearchOperation
 import com.basho.riak.client.core.util.BinaryValue
 
 object App {
-    private val hp = HostAndPort.fromParts("40.87.43.33", 8087)
+    private val hp = HostAndPort.fromParts("13.90.246.231", 8087)
 
     private fun setUpCluster(): RiakCluster {
         val node = RiakNode.Builder()
@@ -37,11 +37,11 @@ object App {
 
 //        importer.importKlantCsv()
 
-//        val productIndex = YokozunaIndex("klantIndex")
-//        val storeIndex = StoreIndex.Builder(productIndex).build()
-//        client.execute(storeIndex)
+        val productIndex = YokozunaIndex("aankoopIndex")
+        val storeIndex = StoreIndex.Builder(productIndex).build()
+        client.execute(storeIndex)
 
-//        client.shutdown()
+        client.shutdown()
 
 //        val animalsBucket = Namespace("animals-type", "animals")
 //
@@ -57,13 +57,13 @@ object App {
 //
 //        client.execute(lionoStore)
 //
-        val searchOp = SearchOperation.Builder(BinaryValue.create("klantIndex"), "klantId_i:1")
-                .build()
-        cluster.execute(searchOp)
-// This will display the actual results as a List of Maps:
-        val results = searchOp.get().allResults
-// This will display the number of results:
-        println(results)
+//        val searchOp = SearchOperation.Builder(BinaryValue.create("klantIndex"), "klantId_i:1")
+//                .build()
+//        cluster.execute(searchOp)
+//// This will display the actual results as a List of Maps:
+//        val results = searchOp.get().allResults
+//// This will display the number of results:
+//        println(results)
 
 
     }

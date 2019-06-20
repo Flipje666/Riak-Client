@@ -42,7 +42,7 @@ internal class CsvImporter(private val client: RiakClient) {
         }
 
         for (product in producten) {
-            storeData(product, product.productId_i.toString(), "product2", "product-type")
+            storeData(product, product.productId_i.toString(), "producten", "product-type")
         }
     }
 
@@ -58,7 +58,7 @@ internal class CsvImporter(private val client: RiakClient) {
         }
 
         for (eenheid in eenheden) {
-            storeData(eenheid, eenheid.eenheidId_i.toString(), "eenheid2", "eenheid-type")
+            storeData(eenheid, eenheid.eenheidId_i.toString(), "eenheden", "eenheid-type")
         }
 
     }
@@ -77,7 +77,7 @@ internal class CsvImporter(private val client: RiakClient) {
         }
 
         for (aankoop in aankopen) {
-            storeData(aankoop, aankoop.aankoopId_i.toString(), "aankoop2", "aankoop-type")
+            storeData(aankoop, aankoop.aankoopId_i.toString(), "aankopen", "aankoop-type")
         }
 
     }
@@ -94,7 +94,7 @@ internal class CsvImporter(private val client: RiakClient) {
         }
 
         for (filiaal in filialen) {
-            storeData(filiaal, filiaal.filiaalId_i.toString(), "filiaal2", "filiaal-type")
+            storeData(filiaal, filiaal.filiaalId_i.toString(), "filialen", "filiaal-type")
         }
 
     }
@@ -111,7 +111,7 @@ internal class CsvImporter(private val client: RiakClient) {
         }
 
         for (klant in klanten) {
-            storeData(klant, klant.klantId_i.toString(), "klant5", "klant-type2")
+            storeData(klant, klant.klantId_i.toString(), "klanten", "klant-type")
         }
 
     }
